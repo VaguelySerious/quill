@@ -12,8 +12,6 @@ class Scroll extends ScrollBlot {
   constructor(registry, domNode, { emitter }) {
     super(registry, domNode);
     this.emitter = emitter;
-    // Some reason fixes composition issues with character languages in Windows/Chrome, Safari
-    this.domNode.addEventListener('DOMNodeInserted', () => {});
     this.optimize();
     this.enable();
   }
