@@ -111,10 +111,12 @@ class Selection {
   }
 
   handleComposition() {
-    this.emitter.on(Emitter.events.COMPOSITION_BEFORE_START, () => {
+    this.root.addEventListener('compositionstart', () => {
       this.composing = true;
+      this.scroll.batchStart();
     });
-    this.emitter.on(Emitter.events.COMPOSITION_END, () => {
+    this.root.addEventListener('compositionend', () => {
+      this.scroll.batchEnd();
       this.composing = false;
       if (this.cursor.parent) {
         const range = this.cursor.restore();

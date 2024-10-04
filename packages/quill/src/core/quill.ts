@@ -18,7 +18,7 @@ import type { DebugLevel } from './logger.js';
 import Module from './module.js';
 import Selection, { Range } from './selection.js';
 import type { Bounds } from './selection.js';
-import Composition from './composition.js';
+// import Composition from './composition.js';
 import Theme from './theme.js';
 import type { ThemeConstructor } from './theme.js';
 import scrollRectIntoView from './utils/scrollRectIntoView.js';
@@ -181,7 +181,7 @@ class Quill {
   emitter: Emitter;
   protected allowReadOnlyEdits: boolean;
   editor: Editor;
-  composition: Composition;
+  // composition: Composition;
   selection: Selection;
 
   theme: Theme;
@@ -221,13 +221,13 @@ class Quill {
     }) as Scroll;
     this.editor = new Editor(this.scroll);
     this.selection = new Selection(this.scroll, this.emitter);
-    this.composition = new Composition(this.scroll, this.emitter);
+    // this.composition = new Composition(this.scroll, this.emitter);
     this.theme = new this.options.theme(this, this.options); // eslint-disable-line new-cap
     this.keyboard = this.theme.addModule('keyboard');
     this.clipboard = this.theme.addModule('clipboard');
     this.history = this.theme.addModule('history');
     this.uploader = this.theme.addModule('uploader');
-    this.theme.addModule('input');
+    // this.theme.addModule('input');
     this.theme.addModule('uiNode');
     this.theme.init();
     this.emitter.on(Emitter.events.EDITOR_CHANGE, (type) => {
@@ -583,7 +583,7 @@ class Quill {
   insertText(
     index: number,
     text: string,
-    formats: Record<string, unknown>,
+    formats: Record<string, unknown>, // ???
     source?: EmitterSource,
   ): Delta;
   insertText(

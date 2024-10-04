@@ -21,7 +21,7 @@ import History from './modules/history.js';
 import Keyboard from './modules/keyboard.js';
 import Uploader from './modules/uploader.js';
 import Delta, { Op, OpIterator, AttributeMap } from 'quill-delta';
-import Input from './modules/input.js';
+// import Input from './modules/input.js';
 import UINode from './modules/uiNode.js';
 
 export { default as Module } from './core/module.js';
@@ -49,7 +49,7 @@ Quill.register({
   'modules/history': History,
   'modules/keyboard': Keyboard,
   'modules/uploader': Uploader,
-  'modules/input': Input,
+  // 'modules/input': Input,
   'modules/uiNode': UINode,
 });
 

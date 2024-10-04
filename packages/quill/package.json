@@ -1,7 +1,7 @@
 {
-  "name": "quill",
+  "name": "quill-ime-fork",
   "version": "2.0.2",
-  "description": "Your powerful, rich text editor",
+  "description": "Fork of Quill that disables custom IME handling",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "https://quilljs.com",
   "main": "quill.js",
